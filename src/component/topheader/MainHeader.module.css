@@ -1,0 +1,23 @@
+.TopHeaderMain {
+    background: linear-gradient(270deg, #0A4FB6 -9.87%, #28859A 111.47%);
+    height: 100vh;
+    padding: 40px 120px;
+}
+
+.Network {
+    text-align: right;
+}
+
+.Network a {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: #FFFFFF;
+    margin-right: 40px;
+    text-decoration: none;
+}
+.Network a img{
+    margin-right: 10px;
+}
