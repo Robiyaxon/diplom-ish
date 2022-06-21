@@ -48,7 +48,7 @@ const ThirdBlock = () => {
   const {t}=useTranslation()
   return (
     <div>
-      <div className={style.carousel}>
+      <div className={style.carousel} id='types'>
         <h1 className={style.carousel__title}>{t("carousel")}</h1>
         <Carousel>
           <div className={style.carouselBlock_body}>
@@ -111,7 +111,7 @@ const ThirdBlock = () => {
         <CountBox end={200} text={t("doctors")} />
         <CountBox end={15} text={t("olim")} />
       </div>
-      <div className={style.endBLock}>
+      <div className={style.endBLock} id='corona'>
         <img className={style.endBLock_img__big} src={end} alt="" />
         <h1 className={style.endBLock__title}>
           {t("corona")}

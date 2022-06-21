@@ -165,7 +165,7 @@ const WeeklyDoctors = () => {
   const {t}=useTranslation()
 
   return (
-    <div className={styles.body}>
+    <div className={styles.body} id='diseases'>
       <h1 className={styles.title}>{t("about")}</h1>
       <p className={styles.text}>
         {t('aboutText')}
