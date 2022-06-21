@@ -36,22 +36,25 @@ import tuberkulyoz3 from "../../assets/tuberkulyoz3.jpg";
 import tuberkulyoz4 from "../../assets/tuberkulyoz4.jpg";
 import tuberkulyoz5 from "../../assets/tuberkulyoz5.jpg";
 import tuberkulyoz6 from "../../assets/tuberkulyoz6.jpg";
+import { useTranslation } from 'react-i18next';
 
 function TabsImg({ come, fix, dead, img, name }) {
+  const {t}=useTranslation()
+
   return (
     <div
       className={styles.tabs__img}
       style={{ backgroundImage: `url(${img})` }}
     >
       <div>
-        <p> {come}-yil krib keldi</p>
+        <p> {come}{t("year")}</p>
         <h1>{name}</h1>
         <h2>
-          <strong>Tuzalganlar:</strong>
+          <strong>{t("recovered")}</strong>
           {fix}
         </h2>
         <h2>
-          <strong>O'lim holati bo'yicha Dunyoda:</strong> {dead}
+          <strong>{t("death")}</strong> {dead}
         </h2>
       </div>
     </div>
@@ -59,39 +62,41 @@ function TabsImg({ come, fix, dead, img, name }) {
 }
 
 function TabsImgBody1() {
+  const {t}=useTranslation()
+
   return (
     <div className={styles.tabs__img__body}>
       <TabsImg
         come={2019}
-        name={"Corona Virus"}
+        name={t("miniMenu2")}
         fix={" 96,19%"}
         dead={107}
         img={img2}
       />
       <TabsImg
         come={"---- "}
-        name={"Mayun chechak"}
+        name={t("miniMenu3")}
         fix={" 96,19%"}
         dead={107}
         img={img5}
       />
       <TabsImg
         come={"---- "}
-        name={"Sariq kasal"}
+        name={t("miniMenu4")}
         fix={" 96,19%"}
         dead={107}
         img={img3}
       />
       <TabsImg
         come={"---- "}
-        name={"Sil kasal"}
+        name={t("miniMenu5")}
         fix={" 96,19%"}
         dead={107}
         img={img4}
       />
       <TabsImg
         come={"----"}
-        name={"Grip kasal"}
+        name={t("miniMenu6")}
         fix={"96,19%"}
         dead={107}
         img={img6}
@@ -157,20 +162,21 @@ function TabsImgBody5() {
 }
 
 const WeeklyDoctors = () => {
+  const {t}=useTranslation()
+
   return (
     <div className={styles.body}>
-      <h1 className={styles.title}>Available to weekly Doctors</h1>
+      <h1 className={styles.title}>{t("about")}</h1>
       <p className={styles.text}>
-        Semper integer est quis leo, nunc. Quis lectus amet aenean massa turpis
-        senectus pulvinar. Pharetra gravida volutpat faucibus faucibus.
+        {t('aboutText')}
       </p>
       <div className={styles.tabs}>
         <div className={styles.tabs__navbar}>
-          <NavLink to={"/"}>All</NavLink>
-          <NavLink to={"/corona"}>Corona</NavLink>
-          <NavLink to={"/maymun"}>Maymun Chechak</NavLink>
-          <NavLink to={"/parenxima"}>Sariq Kasali</NavLink>
-          <NavLink to={"/tuberkulyoz"}>Sil Kasali</NavLink>
+          <NavLink to={"/"}>{t("miniMenu")}</NavLink>
+          <NavLink to={"/corona"}>{t("miniMenu2")}</NavLink>
+          <NavLink to={"/maymun"}>{t("miniMenu3")}</NavLink>
+          <NavLink to={"/parenxima"}>{t("miniMenu4")}</NavLink>
+          <NavLink to={"/tuberkulyoz"}>{t("miniMenu5")}</NavLink>
         </div>
         <Routes>
           <Route index exact element={<TabsImgBody1 />} />
