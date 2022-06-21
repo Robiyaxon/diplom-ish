@@ -32,7 +32,7 @@
     }
     .TopHeaderMain {
         background: linear-gradient(270deg, #0A4FB6 -9.87%, #28859A 111.47%) !important;
-        padding: 10px 10px 20px 10px;
+        padding: 10px 30px 0;
         background-image: none;
         background-position: bottom;
         background-size: 100% 100%;

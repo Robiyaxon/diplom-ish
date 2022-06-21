@@ -48,7 +48,8 @@ li a {
 
 .card__collection {
     position: relative;
-    display: block;
+    display: flex;
+    justify-content: space-between;
     padding: 10px;
     font-family: "Do Hyeon", sans-serif;
     overflow: hidden;
@@ -67,6 +68,10 @@ li a {
     background-position: center;
     margin: 10px;
     border: 2px solid grey;
+}
+.card__collection .cards h2{
+    margin-top: 1rem;
+    text-align: center;
 }
 
 .card__collection .cards--one {

@@ -4,6 +4,7 @@ import { MainTopHeader } from "./component/topheader/MainTopHeader";
 import Registration from "./component/registration/Registration";
 import { Routes, Route } from "react-router-dom";
 import Login from './component/login/Login';
+import { MyBackTop } from "./ScrollerOn";
 function App() {
   return (
     <div className="App">
@@ -20,6 +21,7 @@ function App() {
           }
         />
       </Routes>
+      <MyBackTop/>
     </div>
   );
 }
