@@ -6,6 +6,8 @@ import carousel1 from "../../assets/carousel1.png";
 import carousel2 from "../../assets/carousel2.jpg";
 import carousel3 from "../../assets/carousel3.jpg";
 import carousel4 from "../../assets/carousel4.png";
+import carousel5 from "../../assets/carousel5.png";
+import carousel6 from "../../assets/carousel6.png";
 
 import end from "../../assets/end.png";
 
@@ -78,51 +80,25 @@ const ThirdBlock = () => {
               text={
                 "teri va ko’rinarli shilliq qavatlarning sariq tus olishi bo’lib ......"
               }
-              name="Jocelyn Franci"
+              name="Sariq kasal"
               end="----"
               img={carousel4}
             />
             <Block
               text={
-                "Semper integer est quis leo, nunc. Quis lectus amet massa ......"
+                "Grip tabiatli o’tkir infektsion respirator (nafas yo’llari) ......"
               }
-              name="Jocelyn Franci"
-              end="2019"
-              img={carousel1}
+              name="Grip"
+              end="----"
+              img={carousel5}
             />
             <Block
               text={
-                "Semper integer est quis leo, nunc. Quis lectus amet massa ......"
+                "Tabiiy o'choqli zoonoz infektsiya. Bu intoksikatsiya, isitma......"
               }
-              name="Jocelyn Franci"
-              end="2019"
-              img={carousel1}
-            />
-          </div>
-          <div className={style.carouselBlock_body}>
-            <Block
-              text={
-                "Semper integer est quis leo, nunc. Quis lectus amet massa ......"
-              }
-              name="Jocelyn Franci"
-              end="2019"
-              img={carousel1}
-            />
-            <Block
-              text={
-                "Semper integer est quis leo, nunc. Quis lectus amet massa ......"
-              }
-              name="Jocelyn Franci"
-              end="2019"
-              img={carousel1}
-            />
-            <Block
-              text={
-                "Semper integer est quis leo, nunc. Quis lectus amet massa ......"
-              }
-              name="Jocelyn Franci"
-              end="2019"
-              img={carousel1}
+              name="Tulyaremiya "
+              end="----"
+              img={carousel6}
             />
           </div>
         </Carousel>
