@@ -35,9 +35,9 @@ export const Header = () => {
         <div className={style.Drow_Menu}>
           <a onClick={onClose} href="#aksiya">{t("navbar1")}</a>
           <a onClick={onClose} href="#service">{t("navbar2")}</a>
-          <a onClick={onClose} href="#dostavka">{t("navbar3")}</a>
-          <a onClick={onClose} href="#magazin">{t("navbar4")}</a>
-          <a onClick={onClose} href="#blog">{t("navbar5")}</a>
+          <a onClick={onClose} href="#diseases">{t("navbar3")}</a>
+          <a onClick={onClose} href="#types">{t("navbar4")}</a>
+          <a onClick={onClose} href="#corona">{t("navbar5")}</a>
           <button>
             <NavLink to="login">Sign up</NavLink>
           </button>
@@ -56,9 +56,9 @@ export const Header = () => {
 
           <a href="#aksiya">{t("navbar1")}</a>
           <a href="#service">{t("navbar2")}</a>
-          <a href="#dostavka">{t("navbar3")}</a>
-          <a href="#magazin">{t("navbar4")}</a>
-          <a href="#blog">{t("navbar5")}</a>
+          <a href="#diseases">{t("navbar3")}</a>
+          <a href="#types">{t("navbar4")}</a>
+          <a href="#corona">{t("navbar5")}</a>
         </div>
         <div className={style.Login}>
           <select name="lang" value={lang} onChange={handleChange}>
