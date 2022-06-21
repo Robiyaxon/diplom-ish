@@ -12,22 +12,22 @@ export default function Login(props) {
     {
       id: 1,
       message: "Please input your Name!",
-      name: "name",
-      label: "Name",
+      name: t("name"),
+      label: t("name"),
       value: props.last_name,
       setname1: props.setName,
       type: "text",
-      placeholder: "Enter your name",
+      placeholder: t("enterName"),
     },
     {
       id: 4,
-      message: "Please input your Password!",
+      message: t("please"),
       name: "password",
-      label: "Create a password",
+      label: t("password"),
       value: props.password,
       setname1: props.setPassword,
       type: "password",
-      placeholder: "Enter your Username",
+      placeholder: t("enterPassword"),
     }
   ];
   const map2 = map.map((a) => (
@@ -61,7 +61,7 @@ export default function Login(props) {
         >
           {map2}
           <Button type="primary" htmlType="submit" onClick={click}>
-          {t("login")}
+            {t("login")}
           </Button>
         </Form>
       </div>
