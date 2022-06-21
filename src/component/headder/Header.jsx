@@ -5,6 +5,7 @@ import { Drawer } from "antd";
 import i18n from './../../i18';
 import { useTranslation } from "react-i18next";
 import { AlignLeftOutlined } from "@ant-design/icons";
+import { NavLink, useNavigate } from "react-router-dom";
 
 export const Header = () => {
   const [visible, setVisible] = useState(false);
@@ -14,6 +15,7 @@ export const Header = () => {
     setVisible(true);
   };
   const { t } = useTranslation();
+  let navigate = useNavigate();
 
   const handleChange = (event) => {
     setLang(event.target.value);
@@ -24,6 +26,9 @@ export const Header = () => {
   const onClose = () => {
     setVisible(false);
   };
+  const click = () => {
+    navigate("login")
+  }
   return (
     <>
       <Drawer placement="right" onClose={onClose} visible={visible}>
@@ -33,7 +38,9 @@ export const Header = () => {
           <a onClick={onClose} href="#dostavka">{t("navbar3")}</a>
           <a onClick={onClose} href="#magazin">{t("navbar4")}</a>
           <a onClick={onClose} href="#blog">{t("navbar5")}</a>
-          <button>Sign up</button>
+          <button>
+            <NavLink to="login">Sign up</NavLink>
+          </button>
         </div>
       </Drawer>
       <div className={style.Header}>
@@ -58,7 +65,7 @@ export const Header = () => {
             <option value="uz">UZ</option>
             <option value="eng">ENG</option>
           </select>
-          <button className={style.Block__2}>Sign up</button>
+          <button onClick={click} className={style.Block__2}>Sign up</button>
         </div>
         <p className={style.dropclose} onClick={showDrawer}><AlignLeftOutlined /></p>
       </div>
