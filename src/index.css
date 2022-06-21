@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.WeeklyDoctors_tabs__navbar__ixG-H .active{
+  background-color: #184E61;
+  box-shadow: 0px 8px 30px rgba(1, 11, 25, 0.06);
+  color: #FFFFFF;
+}
+
+.krmNah{
+  background-color: #184E62 !important;
+  
+  box-shadow: 0 0 1px 3px #184E62 !important;
+}
+
+.eWjCzc:hover:enabled, .eWjCzc:focus:enabled{
+  background-color: #184E62 !important;
+}

@@ -5,6 +5,7 @@ import { Drawer } from "antd";
 import i18n from './../../i18';
 import { useTranslation } from "react-i18next";
 import { AlignLeftOutlined } from "@ant-design/icons";
+
 export const Header = () => {
   const [visible, setVisible] = useState(false);
   const defaultLang = localStorage.getItem("lang") || "uz";
