@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import style from "./header.module.css";
-
 import logo from "../../accses/MainHeader/logo.png";
-// import drow2 from "../../accses/MainHeader/drow.svg";
 import { Drawer } from "antd";
 import i18n from './../../i18';
 import { useTranslation } from "react-i18next";
+import { AlignLeftOutlined } from "@ant-design/icons";
 export const Header = () => {
   const [visible, setVisible] = useState(false);
   const defaultLang = localStorage.getItem("lang") || "uz";
@@ -26,30 +25,32 @@ export const Header = () => {
   };
   return (
     <>
+      <Drawer placement="right" onClose={onClose} visible={visible}>
+        <div className={style.Drow_Menu}>
+          <a onClick={onClose} href="#aksiya">{t("navbar1")}</a>
+          <a onClick={onClose} href="#service">{t("navbar2")}</a>
+          <a onClick={onClose} href="#dostavka">{t("navbar3")}</a>
+          <a onClick={onClose} href="#magazin">{t("navbar4")}</a>
+          <a onClick={onClose} href="#blog">{t("navbar5")}</a>
+          <button>Sign up</button>
+        </div>
+      </Drawer>
       <div className={style.Header}>
-        <Drawer placement="right" onClose={onClose} visible={visible}>
-          <div className={style.Drow_Menu}>
-            <a onClick={onClose} href="#aksiya">Акции</a>
-            <a onClick={onClose} href="#katalog">Каталлог</a>
-            <a onClick={onClose} href="#dostavka">Доставка</a>
-            <a onClick={onClose} href="#magazin">О магазине</a>
-            <a onClick={onClose} href="#blog">Блог</a>
-          </div>
-        </Drawer>
+        <img src={logo} alt="" />
+
         <div className={style.block}>
-          <img src={logo} alt="" />
           {/* <img
           onClick={showDrawer}
           src={drow2}
           alt=""
           className={style.drowimgr}
         /> */}
+
           <a href="#aksiya">{t("navbar1")}</a>
-          <a href="#katalog">{t("navbar2")}</a>
+          <a href="#service">{t("navbar2")}</a>
           <a href="#dostavka">{t("navbar3")}</a>
           <a href="#magazin">{t("navbar4")}</a>
           <a href="#blog">{t("navbar5")}</a>
-          <a href="#magazin">{t("navbar6")}</a>
         </div>
         <div className={style.Login}>
           <select name="lang" value={lang} onChange={handleChange}>
@@ -57,8 +58,9 @@ export const Header = () => {
             <option value="eng">ENG</option>
           </select>
           <a href="#blog">Sign in</a>
-          <button>Sign up</button>
+          <button className={style.Block__2}>Sign up</button>
         </div>
+        <p className={style.dropclose} onClick={showDrawer}><AlignLeftOutlined /></p>
       </div>
     </>
   );
