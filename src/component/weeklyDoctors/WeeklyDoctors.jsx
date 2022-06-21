@@ -170,7 +170,7 @@ const WeeklyDoctors = () => {
         {t('aboutText')}
       </p>
       <div className={styles.tabs}>
-        <div className={styles.tabs__navbar}>
+        <div className={styles.tabs__navbar + ' tabs'}>
           <NavLink to={"/"}>{t("miniMenu")}</NavLink>
           <NavLink to={"/corona"}>{t("miniMenu2")}</NavLink>
           <NavLink to={"/maymun"}>{t("miniMenu3")}</NavLink>
