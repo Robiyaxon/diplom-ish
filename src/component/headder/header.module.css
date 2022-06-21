@@ -27,11 +27,13 @@
     align-items: center;
     justify-content: space-around;
 }
-.Login select{
+
+.Login select {
     width: 70px;
     height: 25px;
     border-radius: 10px;
 }
+
 .Header a {
     font-family: 'Montserrat';
     font-style: normal;
@@ -118,6 +120,16 @@
         flex-wrap: wrap;
     }
 
+    .Drow_Menu button {
+        width: 300px;
+        background: linear-gradient(270deg, #0A4FB6 -9.87%, #28859A 111.47%);
+        color: white;
+        cursor: pointer;
+        border: none;
+        height: 40px;
+        margin-top: 2rem;
+    }
+
     .Header {
         display: flex;
         justify-content: space-around;
@@ -128,6 +140,14 @@
     .dropclose {
         display: inherit;
         cursor: pointer;
+    }
+
+    .Drow_Menu a {
+        width: 100%;
+        /* border: 2px solid red; */
+        color: black;
+        font-size: 20px;
+        margin: 5px;
     }
 
     .Login {
