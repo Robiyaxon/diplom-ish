@@ -3,48 +3,50 @@ import styles from "./FormRegistration.module.css";
 // import { useState } from "react";
 import { Form, Input, Button } from "antd";
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 function FormRegistration(props) {
+  const {t} = useTranslation()
   const navigate = useNavigate();
   const map = [
     {
       id: 1,
-      message: "Please input your Name!",
+      message: t("please"),
       name: "name",
-      label: "Name",
+      label: t("name"),
       value: props.last_name,
       setname1: props.setName,
       type: "text",
-      placeholder: "Enter your name",
+      placeholder: t("enterName"),
     },
     {
       id: 2,
-      message: "Please input your Firstname!",
+      message: t("please"),
       name: "firstname",
-      label: "Firstname",
+      label: t("firstname"),
       value: props.first_name ,
       setname1: props.setFirstname,
       type: "text",
-      placeholder: "Enter your Firstname",
+      placeholder: t("enterFirstName"),
     },
     {
       id: 3,
-      message: "Please input your Diplom Id!",
+      message:t("please"),
       name: "username",
       label: "Diplom Id",
       value:  props.username ,
       setname1: props.setUsername,
       type: "text",
-      placeholder: "Enter your Diplom Id",
+      placeholder: t("enterDiplom"),
     },
     {
       id: 4,
-      message: "Please input your Password!",
+      message: t("please"),
       name: "password",
-      label: "Create a password",
+      label: t("password"),
       value:  props.password ,
       setname1: props.setPassword,
       type: "password",
-      placeholder: "Enter your Username",
+      placeholder: t("enterPassword"),
     }
   ];
   const map2 = map.map((a) => (
@@ -69,7 +71,7 @@ function FormRegistration(props) {
   return (
     <div className={styles.form_wrapper}>
       <div className={styles.form_content}>
-        <h3>Registration</h3>
+        <h3>{t("transbank_r")}</h3>
         <Form
           name="basic"
           initialValues={{ remember: true }}
