@@ -3,6 +3,8 @@ import style from "./MainHeader.module.css"
 import time from "../../accses/MainHeader/time.png"
 import tel from "../../accses/MainHeader/tel.png"
 import email from "../../accses/MainHeader/email.png"
+// import { TopHeader } from '../top_header/TopHeader'
+import { Header } from './../headder/Header';
 export const MainTopHeader = () => {
   return (
     <div className={style.TopHeaderMain}>
@@ -12,7 +14,7 @@ export const MainTopHeader = () => {
         <a href="mailto: shovasatkhira@gmail.com"><img src={email} alt="rasm bor edi!" /> shovasatkhira@gmail.com</a>
 
       </div>
-
+      <Header/>
     </div>
   )
 }
