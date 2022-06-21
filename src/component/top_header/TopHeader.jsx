@@ -58,9 +58,9 @@ export const TopHeader = () => {
   ));
   const [visible, setVisible] = useState(false);
 
-  const showDrawer = () => {
-    setVisible(true);
-  };
+  // const showDrawer = () => {
+  //   setVisible(true);
+  // };
   const click = () => {
     navigate("login");
     setVisible(false);
