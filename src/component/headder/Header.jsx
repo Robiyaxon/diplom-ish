@@ -57,7 +57,6 @@ export const Header = () => {
             <option value="uz">UZ</option>
             <option value="eng">ENG</option>
           </select>
-          <a href="#blog">Sign in</a>
           <button className={style.Block__2}>Sign up</button>
         </div>
         <p className={style.dropclose} onClick={showDrawer}><AlignLeftOutlined /></p>
