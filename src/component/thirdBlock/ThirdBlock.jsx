@@ -12,6 +12,7 @@ import carousel6 from "../../assets/carousel6.png";
 import end from "../../assets/end.png";
 
 import style from "./ThirdBlock.module.css";
+import { useTranslation } from 'react-i18next';
 
 const Block = ({ text, img, name, end }) => {
   return (
@@ -44,15 +45,16 @@ function CountBox({ end, text }) {
 }
 
 const ThirdBlock = () => {
+  const {t}=useTranslation()
   return (
     <div>
       <div className={style.carousel}>
-        <h1 className={style.carousel__title}>What Our Patients Say</h1>
+        <h1 className={style.carousel__title}>{t("carousel")}</h1>
         <Carousel>
           <div className={style.carouselBlock_body}>
             <Block
               text={
-                "Kuchli yuqumli kasallik turi dunyo bo'yicha tarqalgan......"
+               t("karona")
               }
               name="Corona Virus"
               end="2019"
@@ -60,17 +62,17 @@ const ThirdBlock = () => {
             />
             <Block
               text={
-                "Maymunchechak kam uchraydigan infeksion kasallik boʻlib ......"
+                t("maymuncha")
               }
-              name="Maymun chechak"
+              name={t("Maymun")}
               end="2003"
               img={carousel2}
             />
             <Block
               text={
-                "Akterial etiologiyali yuqumli kasallik. Kasallik nafaqat tibbiy......"
+                t("Akterial")
               }
-              name="Sil kasalligi"
+              name="Sil"
               end="2019"
               img={carousel3}
             />
@@ -78,15 +80,15 @@ const ThirdBlock = () => {
           <div className={style.carouselBlock_body}>
             <Block
               text={
-                "teri va ko’rinarli shilliq qavatlarning sariq tus olishi bo’lib ......"
+                t("teri")
               }
-              name="Sariq kasal"
+              name="Gipatet"
               end="----"
               img={carousel4}
             />
             <Block
               text={
-                "Grip tabiatli o’tkir infektsion respirator (nafas yo’llari) ......"
+                t("grip")
               }
               name="Grip"
               end="----"
@@ -94,9 +96,9 @@ const ThirdBlock = () => {
             />
             <Block
               text={
-                "Tabiiy o'choqli zoonoz infektsiya. Bu intoksikatsiya, isitma......"
+               t("ochoq")
               }
-              name="Tulyaremiya "
+              name={t("Tulyaremiya")}
               end="----"
               img={carousel6}
             />
@@ -104,10 +106,10 @@ const ThirdBlock = () => {
         </Carousel>
       </div>
       <div className={style.count}>
-        <CountBox end={500} text={"Patients Every day"} />
-        <CountBox end={1500} text={"Patients Capacity"} />
-        <CountBox end={200} text={"Experience Doctor"} />
-        <CountBox end={15} text={"Year's experience"} />
+        <CountBox end={500} text={t("bemor")} />
+        <CountBox end={1500} text={t("sigim")} />
+        <CountBox end={200} text={t("doctors")} />
+        <CountBox end={15} text={t("olim")} />
       </div>
       <div className={style.endBLock}>
         <img className={style.endBLock_img__big} src={end} alt="" />

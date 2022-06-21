@@ -24,6 +24,19 @@
     "menu2ContactButton": "Bizning eng yaxshi xizmatlarimizni taqdim etadi",
       "menuContact": "Bog'lanish",
       "menu1ContactTel": "Telefon",
-  "menu1ContactAdress": "Manzil"
+  "menu1ContactAdress": "Manzil",
+  "bemor":"Har kungi bemorlar",
+  "sigim":"Bemorlarning sig'imi",
+  "doctors":"Tajribali doktor",
+  "olim":"O`lim holati",
+  "carousel":"Yuqumlik kasalliklar turlari",
+  "karona":"Kuchli yuqumli kasallik turi dunyo bo'yicha tarqalgan......",
+  "maymuncha":"Maymunchechak kam uchraydigan infeksion kasallik boʻlib ......",
+  "Akterial":"Akterial etiologiyali yuqumli kasallik. Kasallik nafaqat tibbiy......",
+  "teri":"teri va ko’rinarli shilliq qavatlarning sariq tus olishi bo’lib ......",
+  "grip":"Grip tabiatli o’tkir infektsion respirator (nafas yo’llari) ......",
+  "ochoq":"Tabiiy o'choqli zoonoz infektsiya. Bu intoksikatsiya, isitma......",
+  "Tulyaremiya":"Tulyaremiya",
+  "Maymun":"Maymun chechak"
 
 }
