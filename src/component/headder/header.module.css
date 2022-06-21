@@ -4,20 +4,33 @@
     align-items: center;
     margin-top: 40px;
 }
-.block{
+
+.Block__2 {
+    background-color: transparent;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: 2px solid white;
+}
+
+.block {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 63%;
+    width: 53%;
+
 }
-.Login{
-    width: 25%;
+
+.Login {
+    width: 23%;
     display: flex;
     align-items: center;
     justify-content: space-around;
 }
-.Login a{
-    /* margin-right: 8rem; */
+.Login select{
+    width: 70px;
+    height: 25px;
+    border-radius: 10px;
 }
 .Header a {
     font-family: 'Montserrat';
@@ -28,38 +41,107 @@
     line-height: 160%;
     color: #FFFFFF;
 }
-.Header a:focus{
+
+.Header a:focus {
     border-bottom: 2px solid white;
     padding-bottom: 5px;
 
 }
+
 .drowimgr {
     display: none;
 }
-@media(min-width:0) and (max-width:1150.9px) {
+
+.dropclose {
+    display: none;
+}
+
+@media(min-width:0) and (max-width:600.9px) {
+    .Login {
+        width: 40%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
     .Drow_Menu {
         display: flex;
         width: 100%;
+        justify-content: center;
         flex-wrap: wrap;
     }
 
     .Drow_Menu a {
         width: 100%;
-        font-family: 'Montserrat';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 17px;
-        line-height: 196.19%;
-        margin: 0.5rem 1rem;
-        color: white;
+        /* border: 2px solid red; */
+        color: black;
+        font-size: 20px;
+        margin: 5px;
     }
 
-    .drowimgr {
+    .Drow_Menu button {
+        width: 300px;
+        background: linear-gradient(270deg, #0A4FB6 -9.87%, #28859A 111.47%);
+        color: white;
+        cursor: pointer;
+        border: none;
+        height: 40px;
+        margin-top: 2rem;
+    }
+
+    .Header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .dropclose {
         display: inherit;
         cursor: pointer;
     }
 
-    .Header {
+    .block {
+        display: none;
+    }
+
+    .Login a,
+    .Login button {
+        display: none;
+    }
+}
+
+@media(min-width:601px) and (max-width:1250.9px) {
+    .Drow_Menu {
+        display: flex;
+        width: 100%;
+        justify-content: center;
         flex-wrap: wrap;
+    }
+
+    .Header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 40px;
+    }
+
+    .dropclose {
+        display: inherit;
+        cursor: pointer;
+    }
+
+    .Login {
+        width: 70%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .block {
+        display: none;
+    }
+
+    .Login a,
+    .Login button {
+        display: none;
     }
 }

@@ -5,6 +5,7 @@ import Carousel from "react-elastic-carousel";
 import carousel1 from "../../assets/carousel1.png";
 import carousel2 from "../../assets/carousel2.jpg";
 import carousel3 from "../../assets/carousel3.jpg";
+import carousel4 from "../../assets/carousel4.png";
 
 import end from "../../assets/end.png";
 
@@ -75,11 +76,11 @@ const ThirdBlock = () => {
           <div className={style.carouselBlock_body}>
             <Block
               text={
-                "Semper integer est quis leo, nunc. Quis lectus amet massa ......"
+                "teri va ko’rinarli shilliq qavatlarning sariq tus olishi bo’lib ......"
               }
               name="Jocelyn Franci"
-              end="2019"
-              img={carousel1}
+              end="----"
+              img={carousel4}
             />
             <Block
               text={
@@ -152,8 +153,8 @@ const ThirdBlock = () => {
         <h1 className={style.endBLock__endText}>
           <strong>Corona virus</strong> Semper integer est quis leo, nunc. Quis
           lectus amet aenean massa turpis senectus pulvinar...
-          <br/>
-          <br/>
+          <br />
+          <br />
           <code>Pharetra gravida volutpat faucibus:</code>
           Faucibus sapien faucibus nisl amet, tristique. Mi duis in msed.Semper
           integerSemper integer est quis leo, nunc. Quis lec.

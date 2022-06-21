@@ -7,6 +7,10 @@ import email from "../../accses/MainHeader/email.png";
 import { Header } from "./../headder/Header";
 import WeeklyDoctors from "./../weeklyDoctors/WeeklyDoctors";
 import ThirdBlock from './../thirdBlock/ThirdBlock';
+import { HomeHeader } from './../homeMenu/homeHeader';
+import { Service } from './../serveices/Service';
+import { Doctors } from './../doctors/Doctors';
+
 export const MainTopHeader = () => {
   return (
     <>
@@ -23,7 +27,10 @@ export const MainTopHeader = () => {
           </a>
         </div>
         <Header />
+      <HomeHeader />
       </div>
+      <Service />
+      <Doctors />
       <WeeklyDoctors />
       <ThirdBlock/>
     </>
