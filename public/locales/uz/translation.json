@@ -24,6 +24,10 @@
     "menu2ContactButton": "Bizning eng yaxshi xizmatlarimizni taqdim etadi",
       "menuContact": "Bog'lanish",
       "menu1ContactTel": "Telefon",
-  "menu1ContactAdress": "Manzil"
-
+  "menu1ContactAdress": "Manzil",
+  "miniMenu":"Barchasi",
+  "miniMenu2": "Karona",
+  "miniMenu3": "Maymon chechak",
+  "miniMenu4": "Sariq kasal",
+  "miniMenu5": "Sil kasali"
 }
