@@ -1,13 +1,10 @@
 import React from "react";
-import styles from "../registration/form/FormRegistration.module.css";
+import styles from "./FormRegistration.module.css";
 // import { useState } from "react";
 import { Form, Input, Button } from "antd";
 import { useNavigate } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-export default function Login(props) {
+function FormRegistration(props) {
   const navigate = useNavigate();
-  const { t } = useTranslation();
-
   const map = [
     {
       id: 1,
@@ -20,11 +17,31 @@ export default function Login(props) {
       placeholder: "Enter your name",
     },
     {
+      id: 2,
+      message: "Please input your Firstname!",
+      name: "firstname",
+      label: "Firstname",
+      value: props.first_name ,
+      setname1: props.setFirstname,
+      type: "text",
+      placeholder: "Enter your Firstname",
+    },
+    {
+      id: 3,
+      message: "Please input your Diplom Id!",
+      name: "username",
+      label: "Diplom Id",
+      value:  props.username ,
+      setname1: props.setUsername,
+      type: "text",
+      placeholder: "Enter your Diplom Id",
+    },
+    {
       id: 4,
       message: "Please input your Password!",
       name: "password",
       label: "Create a password",
-      value: props.password,
+      value:  props.password ,
       setname1: props.setPassword,
       type: "password",
       placeholder: "Enter your Username",
@@ -45,14 +62,14 @@ export default function Login(props) {
       />
     </Form.Item>
   ));
-  const click = () => {
+  const click=()=>{
     navigate("/")
     // props.SignApp()
   }
   return (
     <div className={styles.form_wrapper}>
       <div className={styles.form_content}>
-        <h3>{t("login")}</h3>
+        <h3>Registration</h3>
         <Form
           name="basic"
           initialValues={{ remember: true }}
@@ -61,10 +78,12 @@ export default function Login(props) {
         >
           {map2}
           <Button type="primary" htmlType="submit" onClick={click}>
-          {t("login")}
+            Continue
           </Button>
         </Form>
       </div>
     </div>
   );
 }
+
+export default FormRegistration;

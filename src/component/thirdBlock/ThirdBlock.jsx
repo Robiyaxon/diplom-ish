@@ -114,8 +114,7 @@ const ThirdBlock = () => {
       <div className={style.endBLock}>
         <img className={style.endBLock_img__big} src={end} alt="" />
         <h1 className={style.endBLock__title}>
-          Dieting Falling? Here’s When to Consider Bariatric Surgery to Protect
-          Your Heart.
+          {t("corona")}
         </h1>
         <div className={style.endBLock__box}>
           <div>
@@ -129,13 +128,10 @@ const ThirdBlock = () => {
           </h1>
         </div>
         <h1 className={style.endBLock__endText}>
-          <strong>Corona virus</strong> Semper integer est quis leo, nunc. Quis
-          lectus amet aenean massa turpis senectus pulvinar...
+          <strong>{t('miniMenu2')}</strong> 
           <br />
           <br />
-          <code>Pharetra gravida volutpat faucibus:</code>
-          Faucibus sapien faucibus nisl amet, tristique. Mi duis in msed.Semper
-          integerSemper integer est quis leo, nunc. Quis lec.
+          <code>{t('aboutCorona')}</code>
         </h1>
       </div>
     </div>
