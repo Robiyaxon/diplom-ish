@@ -7,11 +7,12 @@ import { useTranslation } from 'react-i18next';
 export default function Login(props) {
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const [message, setMessage] = useState()
-  const [messag2, setMessag2] = useState()
+  const [message, setMessage] = useState("")
+  const [messag2, setMessag2] = useState("")
+  const [messag3, setMessag3] = useState(false)
+
   const map = [
     {
-      
       id: 1,
       message: "Please input your Name!",
       name: t("name"),
@@ -48,7 +49,7 @@ export default function Login(props) {
     </Form.Item>
   ));
   const click = () => {
-
+    setMessag3(true)
     if (message === "Qodirov" && messag2 === "0871") {
       navigate("/")
     } else {
@@ -59,10 +60,12 @@ export default function Login(props) {
     <div className={styles.form_wrapper}>
       <div className={styles.form_content}>
         <h3>{t("login")}</h3>
-       
-        <h2> {
-          message !== "Qodirov"? <>{t("CHECK")}</> : messag2 !== "1234"? <>{t("CHECK")}</> : <></>
-        }</h2>
+       {
+        messag3===true ?<><h2> 
+         { message !== "Qodirov"? <>{t("CHECK")}</> : messag2 !== "1234"? <>{t("CHECK")}</> : <></>
+         }</h2></>:<></>
+       }
+        
         <Form
           name="basic"
           initialValues={{ remember: true }}
