@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../registration/form/FormRegistration.module.css";
 // import { useState } from "react";
 import { Form, Input, Button } from "antd";
@@ -7,15 +7,16 @@ import { useTranslation } from 'react-i18next';
 export default function Login(props) {
   const navigate = useNavigate();
   const { t } = useTranslation();
-
+  const [message, setMessage] = useState()
+  const [messag2, setMessag2] = useState()
   const map = [
     {
       id: 1,
       message: "Please input your Name!",
       name: t("name"),
       label: t("name"),
-      value: props.last_name,
-      setname1: props.setName,
+      value: message,
+      setname1: setMessage,
       type: "text",
       placeholder: t("enterName"),
     },
@@ -24,8 +25,8 @@ export default function Login(props) {
       message: t("please"),
       name: "password",
       label: t("password"),
-      value: props.password,
-      setname1: props.setPassword,
+      value: messag2,
+      setname1: setMessag2,
       type: "password",
       placeholder: t("enterPassword"),
     }
@@ -39,20 +40,28 @@ export default function Login(props) {
     >
       <Input
         value={a.value}
-        // onChange={(e) => a.setname1(e.target.value)}
+        onChange={(e) => a.setname1(e.target.value)}
         placeholder={a.placeholder}
         type={a.type}
       />
     </Form.Item>
   ));
   const click = () => {
-    navigate("/")
-    // props.SignApp()
+
+    if (message === "Qodirov" && messag2 === "0871") {
+      navigate("/")
+    } else {
+      console.log("hato");
+    }
   }
   return (
     <div className={styles.form_wrapper}>
       <div className={styles.form_content}>
         <h3>{t("login")}</h3>
+       
+        <h2> {
+          message === "Qodirov" && messag2 === "1234" ? <></> : <>{t("CHECK")}</>
+        }</h2>
         <Form
           name="basic"
           initialValues={{ remember: true }}
