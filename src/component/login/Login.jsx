@@ -11,6 +11,7 @@ export default function Login(props) {
   const [messag2, setMessag2] = useState()
   const map = [
     {
+      
       id: 1,
       message: "Please input your Name!",
       name: t("name"),
