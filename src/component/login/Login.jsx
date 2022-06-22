@@ -60,7 +60,7 @@ export default function Login(props) {
         <h3>{t("login")}</h3>
        
         <h2> {
-          message === "Qodirov" && messag2 === "1234" ? <></> : <>{t("CHECK")}</>
+          message !== "Qodirov"? <>{t("CHECK")}</> : messag2 !== "1234"? <>{t("CHECK")}</> : <></>
         }</h2>
         <Form
           name="basic"
