@@ -64,7 +64,7 @@ function FormRegistration(props) {
     </Form.Item>
   ));
   const click=()=>{
-    navigate("/")
+    navigate("/diagnosis")
     // props.SignApp()
   }
   return (

@@ -51,7 +51,7 @@ export default function Login(props) {
   const click = () => {
     setMessag3(true)
     if (message === "Qodirov" && messag2 === "0871") {
-      navigate("/")
+      navigate("/diagnosis")
     } else {
       console.log("hato");
     }

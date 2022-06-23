@@ -1,0 +1,45 @@
+.Folder {
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.Folder h1 {
+    font-size: 34px;
+    line-height: 51px;
+    color: rgba(17, 45, 8, 1);
+    font-weight: 600;
+    text-align: center;
+}
+
+.Folder label {
+    font-size: 20px;
+}
+
+.Folder input {
+    margin-bottom: 1.5rem;
+    margin-top: 10px;
+    width: 350px;
+    outline: none;
+    height: 40px;
+    cursor: pointer;
+    font-size: 23px;
+}
+
+.Folder button {
+    width: 350px;
+    height: 50px;
+    margin-top: 2rem;
+    background-color: #0A4FB6;
+    color: white;
+    border: none;
+    cursor: pointer !important;
+}
+@media(min-width:0) and (max-width:400.9px){
+    .Folder button {
+        width: 300px;
+    } 
+    .Folder input {
+        width: 300px;
+    }
+}
