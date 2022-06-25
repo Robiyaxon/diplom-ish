@@ -120,23 +120,23 @@ export const Folde = () => {
           <label htmlFor="">Hududni tanlang</label>
           <br />
           <Select
-            defaultValue="lucy"
+            defaultValue="Andijon"
             className={style.Input34}
             onChange={handleChange}
           >
-            <Option value="jack">Andijon </Option>
-            <Option value="lucy">Buxoro </Option>
-            <Option value="Yiminghe">Fargʻona </Option>
-            <Option value="Yiminghe">Namangan </Option>
-            <Option value="Yiminghe">Jizzax </Option>
-            <Option value="Yiminghe">Xorazm </Option>
-            <Option value="Yiminghe">Navoiy </Option>
-            <Option value="Yiminghe">Qashqadaryo </Option>
-            <Option value="Yiminghe">Qoraqalpogʻiston </Option>
-            <Option value="Yiminghe">Samarqand </Option>
-            <Option value="Yiminghe">Sirdaryo </Option>
-            <Option value="Yiminghe">Surxondaryo </Option>
-            <Option value="Yiminghe">Toshkent</Option>
+            <Option value="Andijon">Andijon </Option>
+            <Option value="Buxoro">Buxoro </Option>
+            <Option value="Fargʻona">Fargʻona </Option>
+            <Option value="Namangan">Namangan </Option>
+            <Option value="Jizzax">Jizzax </Option>
+            <Option value="Xorazm">Xorazm </Option>
+            <Option value="Navoiy">Navoiy </Option>
+            <Option value="Qashqadaryo">Qashqadaryo </Option>
+            <Option value="Qoraqalpogʻiston">Qoraqalpogʻiston </Option>
+            <Option value="Samarqand">Samarqand </Option>
+            <Option value="Sirdaryo">Sirdaryo </Option>
+            <Option value="Surxondaryo">Surxondaryo </Option>
+            <Option value="Toshkent">Toshkent</Option>
           </Select>
           <br />
         </div>

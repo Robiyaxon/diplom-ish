@@ -32,5 +32,8 @@ form#basic {
 @media (min-width:0) and (max-width:600.9px) {
   .ant-form-item{
     width: 80%;
+    margin-right:  auto !important;
+    margin-left:  auto !important;
+
   }
 }
