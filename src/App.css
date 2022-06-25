@@ -8,3 +8,10 @@
   text-align: center;
   font-size: 22px;
 }
+.ant-select:not(.ant-select-customize-input) .ant-select-selector 
+{
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  align-items: center;
+}

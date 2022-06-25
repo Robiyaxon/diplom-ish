@@ -1,7 +1,13 @@
 import React, { useState } from 'react'
 import style from "./Folder.module.css"
-import Modal from 'antd/lib/modal/Modal';
 import { useNavigate } from 'react-router-dom';
+import { Select } from 'antd';
+
+const { Option } = Select;
+
+const handleChange = (value) => {
+    console.log(`selected ${value}`);
+};
 export const Folde = () => {
     const [message, setMessage] = useState("")
     const [messag2, setMessag2] = useState("")
@@ -10,15 +16,6 @@ export const Folde = () => {
     const [messag5, setMessag5] = useState("")
     const [messag6, setMessag6] = useState("")
     const navitae = useNavigate()
-    const [isModalVisible, setIsModalVisible] = useState(false);
-    const handleOk = () => {
-        setIsModalVisible(false);
-        navitae("/")
-    };
-
-    const handleCancel = () => {
-        setIsModalVisible(false);
-    };
     const data = {
         message: message,
         messag2: messag2,
@@ -30,46 +27,90 @@ export const Folde = () => {
     const arr = []
     const click = () => {
         arr.push(data)
-        if (message !== "" || messag2 !== "" || messag3 !== "" || messag4 !== "" || messag5!=="" || messag6!=="") {
-            setIsModalVisible(true);
-        }
+        navitae("/")
 
     }
     return (
         <div className={style.Folder}>
-            <Modal title="Bemor tashxisi" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-                <h2 > <b style={{ color: "#0A4FB6" }}> Bemorning ismi:</b> {messag5}</h2>
-                <h2 > <b style={{ color: "#0A4FB6" }}> Bemorning Familyasi:</b> {messag6}</h2>
-                <h2 > <b style={{ color: "#0A4FB6" }}> Kasallik Turi:</b> {message}</h2>
-                <h2  > <b style={{ color: "#0A4FB6" }}>Kelgan vaqti:</b>  {messag2} </h2>
-                <h2><b style={{ color: "#0A4FB6" }}> Tugash  vaqti:</b>  {messag3} </h2>
-                <h2><b style={{ color: "#0A4FB6" }}> Bemor Id raqami:</b>  {messag4} </h2>
-            </Modal>
-            <div className={style.button}>
-                <h1>Bemor Tashxisi</h1>
-                <h2>Shifokor : Qodirov</h2>
-                <label htmlFor="">Bemorning ismi</label> <br />
+            <h1>Bemor Tashxisi</h1>
+            {/* <h2>Shifokor : Qodirov</h2> */}
+            <div className={style.card}>
+                <div>
+                    <label htmlFor="">Bemorning ismi</label> <br />
                 <input type="text" value={messag5}
                     onChange={(e) => setMessag5(e.target.value)} name="" id="" /> <br />
-                <label htmlFor="">Bemorning Familyasi</label> <br />
+                </div>
+                <div>
+                   <label htmlFor="">Bemorning Familyasi</label> <br />
                 <input type="text" value={messag6}
-                    onChange={(e) => setMessag6(e.target.value)} name="" id="" /> <br />
-                <label htmlFor="">Kasallik Turi</label> <br />
+                    onChange={(e) => setMessag6(e.target.value)} name="" id="" /> <br /> 
+                </div>
+                
+            </div>
+            <div className={style.card}>
+<div>
+     <label htmlFor="">Kasallik Turi</label> <br />
                 <input type="text" value={message}
                     onChange={(e) => setMessage(e.target.value)} name="" id="" /> <br />
-                <label htmlFor="">Kelgan vaqti: </label> <br />
+
+</div>
+               <div>
+       <label htmlFor="">Shifohona nomi</label> <br />
+                <input type="text" name="" id="" /> <br />
+               </div>
+         
+            </div>
+            <div className={style.card}>
+                <div>
+                   <label htmlFor="">Kelgan vaqti: </label> <br />
                 <input type="date" value={messag2}
-                    onChange={(e) => setMessag2(e.target.value)} name="" id="" /> <br />
-                <label htmlFor="">Tugash  vaqti:</label> <br />
+                    onChange={(e) => setMessag2(e.target.value)} name="" id="" /> <br />  
+                   
+                </div>
+                <div>
+                      <label htmlFor="">Tugash  vaqti:</label> <br />
                 <input type="date" value={messag3}
                     onChange={(e) => setMessag3(e.target.value)} name="" id="" /> <br />
-                <br />
-                <label htmlFor="">Bemor Id raqami</label> <br />
-                <input type="text" value={messag4}
-                    onChange={(e) => setMessag4(e.target.value)} name="" id="" /> <br />
-                <button onClick={click}>Yuborish</button>
-
+                    </div>
+                
             </div>
+            <div className={style.card}>
+                <div>
+                     <label htmlFor="">Bemor Id raqami</label> <br />
+                <input type="text" value={messag4}
+                    onChange={(e) => setMessag4(e.target.value)} name="" id="" />
+                     <br /> 
+                </div>
+              <div>
+                  <label htmlFor="">Hududni tanlang</label>
+                <br />
+                <Select
+                    defaultValue="lucy"
+                    className={style.Input34}
+                    onChange={handleChange}
+                >
+
+                    <Option value="jack">Andijon </Option>
+                    <Option value="lucy">Buxoro </Option>
+                    <Option value="Yiminghe">Fargʻona </Option>
+                    <Option value="Yiminghe">Namangan  </Option>
+                    <Option value="Yiminghe">Jizzax  </Option>
+                    <Option value="Yiminghe">Xorazm </Option>
+                    <Option value="Yiminghe">Navoiy  </Option>
+                    <Option value="Yiminghe">Qashqadaryo  </Option>
+                    <Option value="Yiminghe">Qoraqalpogʻiston   </Option>
+                    <Option value="Yiminghe">Samarqand    </Option>
+                    <Option value="Yiminghe">Sirdaryo    </Option>
+                    <Option value="Yiminghe">Surxondaryo     </Option>
+                    <Option value="Yiminghe">Toshkent</Option>
+
+                </Select><br />
+              </div>   
+              
+            </div>
+
+         
+            <button onClick={click}>Yuborish</button>
 
         </div>
     )
