@@ -23,7 +23,7 @@ function App() {
           }
         />
       </Routes>
-      <MyBackTop/>
+      <MyBackTop />
     </div>
   );
 }
