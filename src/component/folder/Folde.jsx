@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import style from "./Folder.module.css";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Select } from "antd";
-import { axios } from "axios";
+import axios from "axios";
+
+import style from "./Folder.module.css";
 
 const { Option } = Select;
 
@@ -16,14 +17,11 @@ export const Folde = () => {
   const [messag4, setMessag4] = useState("");
   const [messag5, setMessag5] = useState("");
   const [messag6, setMessag6] = useState("");
-//   const navitae = useNavigate();
+  const navigate = useNavigate();
   const data = {
-    message: message,
-    messag2: messag2,
-    messag3: messag3,
-    messag4: messag4,
-    messag5: messag5,
-    messag6: messag6,
+    title: messag5,
+    description: message,
+    bemorId: messag4,
   };
   const arr = [];
 
@@ -35,6 +33,7 @@ export const Folde = () => {
       )
       .then((res) => console.log(res.data));
     arr.push(data);
+    navigate('/')
   };
   return (
     <div className={style.Folder}>
