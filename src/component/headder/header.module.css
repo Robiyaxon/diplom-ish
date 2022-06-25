@@ -56,6 +56,9 @@
 
 .dropclose {
     display: none;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 0;
 }
 
 @media(min-width:0) and (max-width:600.9px) {

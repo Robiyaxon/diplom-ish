@@ -28,9 +28,9 @@ export const Footer = () => {
         <h1>{t("navbar1")}</h1>
         <a href="#aksiya">{t("navbar1")}</a>
         <a href="#service">{t("navbar2")}</a>
-        <a href="#dostavka">{t("navbar3")}</a>
-        <a href="#magazin">{t("navbar4")}</a>
-        <a href="#blog">{t("navbar5")}</a>
+        <a href="#diseases">{t("navbar3")}</a>
+        <a href="#types">{t("navbar4")}</a>
+        <a href="#corona">{t("navbar5")}</a>
       </div>
 
 
@@ -50,7 +50,7 @@ export const Footer = () => {
 </a>
       </div>
       <img src={chiziq} alt="" className={style.lien} />
-      <p  className={style.title}> Copyright 2022 The Robiya All Rights Reserved.</p>
+      <p  className={style.title}> Copyright 2022 The  All Rights Reserved.</p>
     </div>
   )
 }

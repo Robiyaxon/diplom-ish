@@ -1,5 +1,5 @@
 {
-  "name": "diplom",
+  "name": "server",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -31,7 +31,10 @@
     "redux-thunk": "^2.4.1",
     "save": "^2.5.0",
     "styled-components": "^5.3.5",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "body-parser": "^1.20.0",
+    "json-server": "^0.17.0",
+    "jsonwebtoken": "^8.5.1"
   },
   "scripts": {
     "start": "react-scripts start",

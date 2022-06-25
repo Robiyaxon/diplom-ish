@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 export const Service = () => {
   const {t}=  useTranslation()
     const map = [
-        { id: 1, img: kitob, title: t("transbanktitle_r"), p: "Semper integer est quis leo, nunc. Quis lectus amet aenean massa turpis senectus " },
+        { id: 1, img: kitob, title: t("transbanktitle_r"), p: t("ishtiyoq") },
         { id: 2, img: odam, title: t("poliknika_r"), p: "Semper integer est quis leo, nunc. Quis lectus amet aenean massa turpis senectus " },
         { id: 3, img: naushnik, title: t("poliknikaraqami_r"), p: "Semper integer est quis leo, nunc. Quis lectus amet aenean massa turpis senectus " },
         { id: 5, img: yurak, title: t("transbankfiliali_r"), p: "Semper integer est quis leo, nunc. Quis lectus amet aenean massa turpis senectus " },
@@ -21,7 +21,7 @@ export const Service = () => {
         <img src={a.img} alt="" />
         <div className={style.card_block}>
             <h2>{a.title}</h2>
-            <p>{a.p}</p>
+            <p>{t("ishtiyoq")}</p>
         </div>
         <div className={style.go_corner}>
             <div className={style.go_arrow}>
@@ -32,7 +32,7 @@ export const Service = () => {
     return (
         <div className={style.Service} id="service">
             <h1>{t("menu2ContactButton")}</h1>
-            <h6>Semper integer est quis leo, nunc. Quis lectus amet aenean massa turpis senectus pulvinar. Pharetra gravida volutpat faucibus faucibus.</h6>
+            <h6>{t("xizmat")}</h6>
             <div className={style.container}>
  {map2}
             </div>

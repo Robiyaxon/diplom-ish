@@ -58,14 +58,13 @@ function FormRegistration(props) {
     >
       <Input
         value={a.value}
-        onChange={(e) => a.setname1(e.target.value)}
         placeholder={a.placeholder}
         type={a.type}
       />
     </Form.Item>
   ));
   const click=()=>{
-    navigate("/")
+    navigate("/diagnosis")
     // props.SignApp()
   }
   return (

@@ -4,12 +4,15 @@ import { MainTopHeader } from "./component/topheader/MainTopHeader";
 import Registration from "./component/registration/Registration";
 import { Routes, Route } from "react-router-dom";
 import Login from './component/login/Login';
+import { MyBackTop } from "./ScrollerOn";
+import { Folde } from './component/folder/Folde';
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="signUp" element={<Registration />} />
         <Route path="login" element={<Login />} />
+        <Route path="diagnosis" element={<Folde />} />
         <Route
           path="/*"
           element={
@@ -20,6 +23,7 @@ function App() {
           }
         />
       </Routes>
+      <MyBackTop/>
     </div>
   );
 }

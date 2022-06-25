@@ -3,7 +3,6 @@ import React from "react";
 import styles from "./WeeklyDoctors.module.css";
 import { NavLink } from "react-router-dom";
 import { Routes, Route } from "react-router-dom";
-import img1 from "../../assets/corona1.jpg";
 import img2 from "../../assets/corona1.webp";
 import img3 from "../../assets/carousel4.png";
 import img4 from "../../assets/carousel3.jpg";
@@ -171,7 +170,7 @@ const WeeklyDoctors = () => {
         {t('aboutText')}
       </p>
       <div className={styles.tabs}>
-        <div className={styles.tabs__navbar}>
+        <div className={styles.tabs__navbar + ' tabs'}>
           <NavLink to={"/"}>{t("miniMenu")}</NavLink>
           <NavLink to={"/corona"}>{t("miniMenu2")}</NavLink>
           <NavLink to={"/maymun"}>{t("miniMenu3")}</NavLink>
