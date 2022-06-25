@@ -8,10 +8,29 @@
   text-align: center;
   font-size: 22px;
 }
+
+form#basic {
+  margin: auto;
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* .ant-form-item{
+  width: 50%;
+  margin: 0 auto;
+} */
 .ant-select:not(.ant-select-customize-input) .ant-select-selector 
 {
   width: 100% !important;
   height: 100% !important;
   display: flex;
   align-items: center;
+}
+
+@media (min-width:0) and (max-width:600.9px) {
+  .ant-form-item{
+    width: 80%;
+  }
 }

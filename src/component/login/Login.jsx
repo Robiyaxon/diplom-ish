@@ -1,36 +1,51 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../registration/form/FormRegistration.module.css";
 // import { useState } from "react";
 import { Form, Input, Button } from "antd";
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { login } from '../../redux/actions/authAction';
 export default function Login(props) {
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const [message, setMessage] = useState("")
-  const [messag2, setMessag2] = useState("")
-  const [messag3, setMessag3] = useState(false)
+  const dispatch = useDispatch();
+  const [password, setPassword] = useState('')
+  const [diplomId, setDiplomId] = useState('')
+
+  const { isAuthenticated } = useSelector((state) => state.authReducer);
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate("/diagnosis");
+    }
+  }, [isAuthenticated, navigate]);
+
+  const onFinish = (values) => {
+    dispatch(login({password: password, diplomid: diplomId}));
+  };
 
   const map = [
     {
       id: 1,
-      message: "Please input your Name!",
-      name: t("name"),
-      label: t("name"),
-      value: message,
-      setname1: setMessage,
+      message: "Please input your Diplom Id!",
+      name: "name",
+      label: "Name",
+      value: diplomId,
+      setname1: setDiplomId,
       type: "text",
-      placeholder: t("enterName"),
+      placeholder: "Enter your Diplom ID",
     },
     {
       id: 4,
-      message: t("please"),
+      message: "Please input your Password!",
       name: "password",
-      label: t("password"),
-      value: messag2,
-      setname1: setMessag2,
+      label: "Create a password",
+      value: password,
+      setname1: setPassword,
       type: "password",
-      placeholder: t("enterPassword"),
+      placeholder: "Enter your Username",
     }
   ];
   const map2 = map.map((a) => (
@@ -48,24 +63,11 @@ export default function Login(props) {
       />
     </Form.Item>
   ));
-  const click = () => {
-    setMessag3(true)
-    if (message === "Qodirov" && messag2 === "0871") {
-      navigate("/diagnosis")
-    } else {
-      console.log("hato");
-    }
-  }
+  
   return (
     <div className={styles.form_wrapper}>
       <div className={styles.form_content}>
         <h3>{t("login")}</h3>
-       {
-        messag3===true ?<><h2> 
-         { message !== "Qodirov"? <>{t("CHECK")}</> : messag2 !== "1234"? <>{t("CHECK")}</> : <></>
-         }</h2></>:<></>
-       }
-        
         <Form
           name="basic"
           initialValues={{ remember: true }}
@@ -73,8 +75,8 @@ export default function Login(props) {
           layout="vertical"
         >
           {map2}
-          <Button type="primary" htmlType="submit" onClick={click}>
-            {t("login")}
+          <Button type="primary" htmlType="submit" onClick={onFinish}>
+          {t("login")}
           </Button>
         </Form>
       </div>

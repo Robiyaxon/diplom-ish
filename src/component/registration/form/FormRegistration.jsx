@@ -5,6 +5,7 @@ import { Form, Input, Button } from "antd";
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import axios from "axios";
+
 function FormRegistration(props) {
   const { t } = useTranslation()
   const [name, setName] = useState("");
