@@ -106,7 +106,7 @@ export const Folde = () => {
       </div>
       <div className={style.card}>
         <div>
-          <label htmlFor="">Bemor Id raqami</label> <br />
+          <label htmlFor="">JSHIR</label> <br />
           <input
             type="text"
             value={messag4}
